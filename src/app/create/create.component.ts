@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {IProduct} from '../iproduct';
 import {ProductService} from '../product.service';
 import {ActivatedRoute} from '@angular/router';
@@ -13,17 +13,18 @@ export class CreateComponent implements OnInit {
     id: 0,
     name: '',
     description: ''
-  }
+  };
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private productService: ProductService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
   }
 
   create() {
-  this.productService.create(this.product);
+    this.productService.create(this.product);
   }
 }
