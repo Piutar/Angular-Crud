@@ -22,7 +22,7 @@ export class DeleteComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscription = this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       const id = +paramMap.get('id');
-      this.product = this.productService.findProductById(id);
+      this.product = this.productService.findById(id);
     });
   }
 
