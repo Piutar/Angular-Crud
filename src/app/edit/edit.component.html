@@ -1,9 +1,11 @@
-<h2>Edit Product id: {{product.id}} </h2>
+<div class="container-fluid">
+  <h2>Edit Product id: {{product.id}} </h2>
 
-<a [routerLink]="''">Back to List</a>
+  <a [routerLink]="''">Back to List</a>
+</div>
 
-<form>
-  <input type="text" name="name" [(ngModel)]="product.name">
-  <input type="text" name="description" [(ngModel)]="product.description">
-  <input type="submit" [value]="'Edit'" (click)="update()">
+<form class="form-group">
+  <input type="text" class="form-control" name="name" [(ngModel)]="product.name">
+  <input type="text" class="form-control" name="description" [(ngModel)]="product.description">
+  <input type="submit" class="btn btn-primary" [value]="'Edit'" (click)="update()">
 </form>
